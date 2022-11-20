@@ -1,4 +1,5 @@
 package com.example.sandboxsbcaching.infra
 
-class ArticleTable {
-}
+import org.springframework.data.repository.CrudRepository
+
+interface ArticleTable : CrudRepository<Article, ArticleId>

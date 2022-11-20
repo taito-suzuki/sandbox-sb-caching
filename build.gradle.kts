@@ -23,19 +23,19 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
-    // https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-core
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
-
     implementation("org.springframework.boot:spring-boot-devtools")
-
+    // Spring Cacheとは関係ないメモ
     // suspendな関数をコントローラーのメソッドにするために必要なライブラリ。
     // TODO これを入れないと動かない理由がわかってない。
     // https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-reactor
     runtimeOnly("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.6.4")
+    implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
+    runtimeOnly("org.postgresql:postgresql")
 
-
-    // Spring cache関係の依存
+    // spring-boot-starter-cacheにより、Spring Cacheを使う上で必要となるライブラリを丸ごと依存に含めることができる。
     implementation("org.springframework.boot:spring-boot-starter-cache")
+    // Spring CacheのCaffeine実装。
     implementation("com.github.ben-manes.caffeine:caffeine")
 }
 
