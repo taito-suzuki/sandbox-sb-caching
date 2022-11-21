@@ -19,5 +19,6 @@ Spring Frameworkには、Spring Cache Abstractionという、抽象化された�
 サンプルプログラムの実行方法。
 
 ```shell
+docker compose up
 ./gradlew bootRun
 ```
